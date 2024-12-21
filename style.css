@@ -1,0 +1,172 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: url('assests/background.jpg')no-repeat;
+    background-size: cover;
+    color: white;
+}
+
+.menu {
+    display: none;
+}
+
+.cointainer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo img {
+    height: 176px;
+    width: 196px;
+    background: none;
+    background-color: none;
+    color: white;
+}
+
+.navi ul {
+    display: flex;
+}
+
+.navi ul li {
+    list-style: none;
+}
+
+.navi ul li a {
+    display: block;
+    text-decoration: none;
+    color: white;
+    padding: 10px 40px;
+    font-size: 1.4rem;
+    font-weight: 600;
+}
+
+.navi ul li a:hover {
+    text-decoration: underline;
+    color: lightgray;
+    transition: 0.5s;
+    font-weight: 600;
+}
+
+
+.btn {
+    display: block;
+    padding: 9px 30px;
+    margin-right: 10%;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    border-radius: 15px;
+    background: linear-gradient(-260deg, blue, blue, darkviolet, darkviolet);
+    font-weight: 700;
+    font-size: 12px;
+    color: white;
+}
+
+.btn:hover {
+    text-decoration: underline;
+    transition: 0.5s;
+}
+
+.music {
+    height: 400px;
+    width: 100%;
+    align-content: center;
+    text-align: center;
+}
+
+.music i {
+    cursor: pointer;
+    margin: 3px;
+    font-weight: 500;
+    font-size: 20px;
+}
+
+.music h3 {
+    cursor: pointer;
+    font-size: 25px;
+    font-weight: 600;
+}
+
+.music h1 {
+    font-size: 50px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+
+.collection {
+    display: block;
+    cursor: pointer;
+    width: 15%;
+    margin: auto;
+    padding: 6px 15px;
+    border-radius: 15px;
+    border: none;
+    outline: none;
+    background: linear-gradient(-260deg, blue, darkviolet);
+    color: wheat;
+    font-weight: bolder;
+    font-size: 15px;
+    text-align: center;
+}
+
+.collection:hover {
+    text-decoration: underline;
+}
+
+#click{
+    display: none;
+}
+
+@media (max-width:920px) {
+    body{
+        background-size: cover;
+    }
+
+    .navi ul {
+        position: fixed;
+        display: block;
+        top: 130px;
+        left: -100%;
+        width: 100%;
+        background: transparent;
+        height: 100vh;
+        backdrop-filter: blur(10px);
+        transition: all 0.5s ease;
+    }
+    #click:checked ~ .navi ul{
+        left: 0%;
+    }
+    #click:checked ~ .menu i::before{
+        content: "\x";
+    }
+    .navi ul li {
+        margin-top: 40px 0;
+        text-align: center;
+    }
+
+    .navi ul li a {
+        display: block;
+        font-size: 30px;
+    }
+
+    .menu {
+        display: block;
+        right: 0;
+        color: white;
+        font-size: 30px;
+    }
+
+    .btn {
+        display: none;
+    }
+
+    .collection{
+        width:200px;
+    }
+}
