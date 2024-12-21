@@ -165,7 +165,9 @@ body {
     .btn {
         display: none;
     }
-
+    .music{
+        height: 100%;
+    }
     .collection{
         width:200px;
     }
